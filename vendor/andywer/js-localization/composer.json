@@ -1,0 +1,42 @@
+{
+    "name": "andywer/js-localization",
+    "description": "Laravel package to provide localizations to the Javascript code.",
+    "keywords": ["laravel", "javascript", "localization", "translation", "messages"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Wermke",
+            "email": "andy@dev.next-step-software.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "5.x"
+    },
+    "require-dev": {
+        "mockery/mockery": "~0.9.4",
+        "orchestra/testbench": "3.0.*",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "JsLocalization\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "extra": {
+        "component": "package",
+        "frameworks": ["Laravel 5"]
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git://github.com/orchestral/phpseclib.git"
+        }
+    ]
+}

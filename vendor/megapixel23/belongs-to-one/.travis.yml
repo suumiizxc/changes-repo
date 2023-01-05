@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+
+cache:
+  directories:
+    - $HOME/.composer
+
+env:
+  - LARAVEL_VERSION=5.5.*
+
+before_script:
+  - composer self-update
+  - if [ "LARAVEL_VERSION" != "" ]; then composer require "laravel/framework:${LARAVEL_VERSION}" --no-update; fi;
+  - composer update
+
+script:
+  - vendor/bin/phpunit
